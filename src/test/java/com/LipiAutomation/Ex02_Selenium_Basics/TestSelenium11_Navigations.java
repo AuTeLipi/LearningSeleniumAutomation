@@ -1,6 +1,6 @@
 package com.LipiAutomation.Ex02_Selenium_Basics;
 
-import jdk.jfr.Description;
+import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
