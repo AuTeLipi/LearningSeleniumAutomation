@@ -27,5 +27,8 @@ public class CommonToAll {
         return driver.findElement(By.partialLinkText(text));
     }
 
+    public WebElement findElementByID(WebDriver driver,String text) {
+        return driver.findElement(By.id(text));
+    }
 
 }
