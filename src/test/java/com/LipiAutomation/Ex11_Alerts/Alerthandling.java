@@ -31,8 +31,9 @@ public class Alerthandling extends CommonToAll {
         Alert alert = driver.switchTo().alert();
         alert.accept();
 
-        WebElement result = driver.findElement(By.id("result"));
+        String result = driver.findElement(By.id("result")).getText();
         Assert.assertEquals(result, "You successfully clicked an alert");
+        System.out.println(result);
 
         //JSConfirm
         WebElement JSConfirm = driver.findElement(By.xpath("//button[@onclick='jsConfirm()']"));
@@ -44,8 +45,9 @@ public class Alerthandling extends CommonToAll {
         Alert alert1 = driver.switchTo().alert();
         alert1.accept();
 
-        WebElement resultJSConfirm = driver.findElement(By.id("result"));
-        Assert.assertEquals(result, "You clicked: Ok");
+        String resultJSConfirm = driver.findElement(By.id("result")).getText();
+        Assert.assertEquals(resultJSConfirm, "You clicked: Ok");
+        System.out.println(resultJSConfirm);
 
         //JSConfirmCancel
         WebElement JSConfirmCancel = driver.findElement(By.xpath("//button[@onclick='jsConfirm()']"));
@@ -57,8 +59,9 @@ public class Alerthandling extends CommonToAll {
         Alert alert2 = driver.switchTo().alert();
         alert2.dismiss();
 
-        WebElement resultJSConfirmCancel = driver.findElement(By.id("result"));
-        Assert.assertEquals(result, "You clicked: Cancel");
+        String resultJSConfirmCancel = driver.findElement(By.id("result")).getText();
+        Assert.assertEquals(resultJSConfirmCancel, "You clicked: Cancel");
+        System.out.println(resultJSConfirmCancel);
 
         //JSPrompt
         WebElement JSPrompt =driver.findElement(By.xpath("//button[@onclick='jsPrompt()']"));
@@ -71,8 +74,9 @@ public class Alerthandling extends CommonToAll {
         alert3.sendKeys("Lipi");
         alert3.accept();
 
-        WebElement resultJSPrompt = driver.findElement(By.id("result"));
-        Assert.assertEquals(result, "You entered: Lipi");
+        String resultJSPrompt = driver.findElement(By.id("result")).getText();
+        Assert.assertEquals(resultJSPrompt, "You entered: Lipi");
+        System.out.println(resultJSPrompt);
 
         //JSPromptCancel
         WebElement JSPromptCancel =driver.findElement(By.xpath("//button[@onclick='jsPrompt()']"));
@@ -84,8 +88,9 @@ public class Alerthandling extends CommonToAll {
         Alert alert4 = driver.switchTo().alert();
         alert4.dismiss();
 
-        WebElement resultJSPromptCancel = driver.findElement(By.id("result"));
-        Assert.assertEquals(result, "You entered: null");
+        String resultJSPromptCancel = driver.findElement(By.id("result")).getText();
+        Assert.assertEquals(resultJSPromptCancel, "You entered: null");
+        System.out.println(resultJSPromptCancel);
 
         closeBrowser(driver);
 
