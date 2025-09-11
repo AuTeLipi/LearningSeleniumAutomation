@@ -71,11 +71,12 @@ public class Alerthandling extends CommonToAll {
         wait3.until(ExpectedConditions.alertIsPresent());
 
         Alert alert3 = driver.switchTo().alert();
-        alert3.sendKeys("Lipi");
+        String name = "Lipi";
+        alert3.sendKeys(name);
         alert3.accept();
 
         String resultJSPrompt = driver.findElement(By.id("result")).getText();
-        Assert.assertEquals(resultJSPrompt, "You entered: Lipi");
+        Assert.assertEquals(resultJSPrompt, "You entered: " +name);
         System.out.println(resultJSPrompt);
 
         //JSPromptCancel
@@ -93,7 +94,6 @@ public class Alerthandling extends CommonToAll {
         System.out.println(resultJSPromptCancel);
 
         closeBrowser(driver);
-
 
     }
 }

@@ -31,4 +31,8 @@ public class CommonToAll {
         return driver.findElement(By.id(text));
     }
 
+    public WebElement findElementByXpath(WebDriver driver,String text) {
+        return driver.findElement(By.xpath(text));
+    }
+
 }
