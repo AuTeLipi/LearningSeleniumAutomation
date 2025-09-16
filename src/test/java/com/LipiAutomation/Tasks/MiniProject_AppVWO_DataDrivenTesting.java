@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class MiniProject_VWO_DataProvider extends CommonToAll {
+public class MiniProject_AppVWO_DataDrivenTesting extends CommonToAll {
 
     @Test(dataProvider = "getData")
     public void test_VWOLoginDataDriven_NegativeTC(String email, String password) {
