@@ -57,7 +57,7 @@ public class MiniProject_AppVWO_DataDrivenTesting extends CommonToAll {
     @Test(dataProvider = "getData")
     public void test_VWOLoginDataDriven_Login_PositiveTC(String email, String password) {
 
-        //Without using Data Driven Testing
+        //Using Data Driven Testing but required valid Login Credentials Only
         WebDriver driver = new ChromeDriver();
         driver.get("https://app.vwo.com/#/login");
         driver.manage().window().maximize();
