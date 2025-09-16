@@ -18,7 +18,7 @@ import java.time.Duration;
 public class MiniProject_AppVWO_DataDrivenTesting extends CommonToAll {
 
     @Test(dataProvider = "getData")
-    public void test_VWOLoginDataDriven_NegativeTC(String email, String password) {
+    public void test_VWOLoginDataDriven_Login_NegativeTC(String email, String password) {
 
         //Using Data Driven Testing
         WebDriver driver = new ChromeDriver();
@@ -53,15 +53,9 @@ public class MiniProject_AppVWO_DataDrivenTesting extends CommonToAll {
 
     }
 
-    @DataProvider
-    public static Object[][] getData() {
-        // READ THE DATA FROM THE EXCEL FILE
-        // GIVE THEM IN THE 2D ARRAY
-        return UtilExcel.getTestDataFromExcel("sheet1");
-    }
 
-    @Test()
-    public void test_VWOLoginDataDriven_PositiveTC() {
+    @Test(dataProvider = "getData")
+    public void test_VWOLoginDataDriven_Login_PositiveTC(String email, String password) {
 
         //Without using Data Driven Testing
         WebDriver driver = new ChromeDriver();
@@ -74,10 +68,10 @@ public class MiniProject_AppVWO_DataDrivenTesting extends CommonToAll {
         wait.until(ExpectedConditions.titleIs("Login - VWO"));
 
         WebElement usernameInputBox = driver.findElement(By.id("login-username"));
-        usernameInputBox.sendKeys("contact+aug@thetestingacademy.com");
+        usernameInputBox.sendKeys(email);
 
         WebElement passwordInputBox = driver.findElement(By.id("login-password"));
-        passwordInputBox.sendKeys("TtxkgQ!s$rJBk85");
+        passwordInputBox.sendKeys(password);
 
         WebElement RememberMe = driver.findElement(By.xpath("(//*[name()='svg' and contains(@class, 'checkbox-radio-icon')])[1]"));
         RememberMe.click();
@@ -94,5 +88,12 @@ public class MiniProject_AppVWO_DataDrivenTesting extends CommonToAll {
 
         closeBrowser(driver);
 
+    }
+
+    @DataProvider
+    public static Object[][] getData() {
+        // READ THE DATA FROM THE EXCEL FILE
+        // GIVE THEM IN THE 2D ARRAY
+        return UtilExcel.getTestDataFromExcel("sheet1");
     }
 }
