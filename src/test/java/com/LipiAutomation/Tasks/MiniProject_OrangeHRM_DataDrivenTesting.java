@@ -51,6 +51,8 @@ public class MiniProject_OrangeHRM_DataDrivenTesting extends CommonToAll {
 
         Assert.assertEquals(ErrorMsg.getText(), "Invalid credentials");
 
+        closeBrowser(driver);
+
     }
 
     @DataProvider
