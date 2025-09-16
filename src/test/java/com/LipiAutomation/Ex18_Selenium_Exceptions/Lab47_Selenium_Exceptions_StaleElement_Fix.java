@@ -1,14 +1,11 @@
-package com.LipiAutomation.Ex19_Selenium_Exceptions;
+package com.LipiAutomation.Ex18_Selenium_Exceptions;
 
 import com.LipiAutomation.utils.CommonToAll;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class Lab46_Selenium_Exceptions_StaleElement extends CommonToAll {
+public class Lab47_Selenium_Exceptions_StaleElement_Fix extends CommonToAll {
 
     @Test
     public void test_selenium_exceptions() {
@@ -19,12 +16,22 @@ public class Lab46_Selenium_Exceptions_StaleElement extends CommonToAll {
 
         WebElement search_input_box  = driver.findElement(By.xpath("//textarea[@id='APjFqb']"));
 
+
         driver.navigate().refresh();
         // org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
         //  (Session info: chrome=140.0.7339.133)
 
-        search_input_box.sendKeys("the testing academy"+ Keys.ENTER);
 
+        try {
+            search_input_box.sendKeys("the testing academy"+ Keys.ENTER);
+        } catch (StaleElementReferenceException e) {
+            System.out.println("StaleElementReferenceException");
+
+            // Again to find the  element
+            WebElement search_input_box1  = driver.findElement(By.xpath("//textarea[@id='APjFqb']"));
+            search_input_box1.sendKeys("the testing academy"+ Keys.ENTER);
+
+        }
 
     }
 }

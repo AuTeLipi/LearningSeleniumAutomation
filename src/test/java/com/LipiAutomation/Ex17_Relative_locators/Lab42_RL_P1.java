@@ -1,4 +1,4 @@
-package com.LipiAutomation.Ex18_Relative_locators;
+package com.LipiAutomation.Ex17_Relative_locators;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

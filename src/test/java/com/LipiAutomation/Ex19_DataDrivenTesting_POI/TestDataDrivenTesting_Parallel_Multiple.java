@@ -1,4 +1,4 @@
-package com.LipiAutomation.Ex17_DataDrivenTesting;
+package com.LipiAutomation.Ex19_DataDrivenTesting_POI;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

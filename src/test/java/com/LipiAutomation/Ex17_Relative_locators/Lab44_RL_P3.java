@@ -1,4 +1,4 @@
-package com.LipiAutomation.Ex18_Relative_locators;
+package com.LipiAutomation.Ex17_Relative_locators;
 
 import com.LipiAutomation.Ex09_WaitHelper.WaitHelpers;
 import com.LipiAutomation.utils.CommonToAll;

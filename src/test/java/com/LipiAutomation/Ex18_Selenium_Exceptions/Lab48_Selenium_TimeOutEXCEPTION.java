@@ -1,4 +1,4 @@
-package com.LipiAutomation.Ex19_Selenium_Exceptions;
+package com.LipiAutomation.Ex18_Selenium_Exceptions;
 
 import com.LipiAutomation.utils.CommonToAll;
 import org.openqa.selenium.By;
