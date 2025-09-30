@@ -1,11 +1,11 @@
+<div align="center">
+
 # 🚀 Selenium 4.35 Web Automation Learning Repository
 
 [![Selenium](https://img.shields.io/badge/Selenium-4.35-green.svg)](https://selenium.dev/)
 [![Java](https://img.shields.io/badge/Java-11+-orange.svg)](https://openjdk.java.net/)
 [![TestNG](https://img.shields.io/badge/TestNG-Latest-blue.svg)](https://testng.org/)
 [![Maven](https://img.shields.io/badge/Maven-3.6+-red.svg)](https://maven.apache.org/)
-
-<div align="center">
 
 <img width="901" height="766" alt="Image" src="https://github.com/user-attachments/assets/6c9d55b1-963d-46bf-8b0d-e3330ff795a1" />
 
