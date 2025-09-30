@@ -5,7 +5,11 @@
 [![TestNG](https://img.shields.io/badge/TestNG-Latest-blue.svg)](https://testng.org/)
 [![Maven](https://img.shields.io/badge/Maven-3.6+-red.svg)](https://maven.apache.org/)
 
+<div align="center">
 
+<img width="901" height="766" alt="Image" src="https://github.com/user-attachments/assets/6c9d55b1-963d-46bf-8b0d-e3330ff795a1" />
+
+</div>
 
 ## 📚 About This Repository
 
